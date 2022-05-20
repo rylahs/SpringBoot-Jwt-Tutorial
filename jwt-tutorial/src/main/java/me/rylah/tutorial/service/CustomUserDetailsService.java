@@ -40,4 +40,18 @@ public class CustomUserDetailsService implements UserDetailsService {
                 user.getPassword(),
                 grantedAuthorities);
     }
+
+//    @Override
+//    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//        User user = userRepository.findOneWithAuthoritiesByUsername(username)
+//                .orElseThrow(
+//                        () -> new UsernameNotFoundException(String.format("'%s' not found", username)));
+//        if (!user.isActivated()) {
+//            throw new IllegalStateException(String.format("'%s' is not activated", username));
+//        }
+//        return new org.springframework.security.core.userdetails.User(user.getUsername(),
+//                user.getPassword(), user.getAuthorities().stream()
+//                .map(authority -> new SimpleGrantedAuthority(authority.getAuthorityName()))
+//                .collect(Collectors.toSet()));
+//    }
 }

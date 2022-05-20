@@ -40,5 +40,9 @@ public class AuthController {
 
         return new ResponseEntity<>(new TokenDto(jwt), httpHeaders, HttpStatus.OK);
 
+//        return ResponseEntity.ok()
+//                .header(HttpHeaders.AUTHORIZATION, "Bearer " + jwt)
+//                .body(TokenDto.builder().token(jwt).build());
+
     }
 }

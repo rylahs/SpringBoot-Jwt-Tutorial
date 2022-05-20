@@ -5,11 +5,8 @@ import lombok.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@Getter
-@Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class LoginDto {
 
     @NotNull

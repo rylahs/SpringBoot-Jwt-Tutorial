@@ -2,11 +2,10 @@ package me.rylah.tutorial.dto;
 
 import lombok.*;
 
-@Getter
-@Setter
-@Builder
+@Data
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@NoArgsConstructor
+@Builder
 public class TokenDto {
 
     private String token;
